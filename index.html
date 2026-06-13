@@ -1131,6 +1131,17 @@
                 — let's talk.</p>
 
               <div class="reveal d3 flex flex-col gap-4">
+                <a href="tel:+923701537214"
+                  class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+                  <span
+                    class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.5 4.5a1 1 0 01-.5 1.21l-2.1 1.05a11.04 11.04 0 005.52 5.52l1.05-2.1a1 1 0 011.21-.5l4.5 1.5A1 1 0 0121 15.72V19a2 2 0 01-2 2h-1C9.16 21 3 14.84 3 7V5z" />
+                    </svg>
+                  </span>
+                  <span class="text-sm">+92 370 1537214</span>
+                </a>
                 <a href="mailto:muhamdsaad.dev@gmail.com"
                   class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
                   <span
@@ -1167,44 +1178,45 @@
               </div>
             </div>
 
-            <div class="reveal d2">
-              <form action="https://formspree.io/f/xkoaqkqg" method="POST">
-                <div class="flex flex-col gap-4">
-                  <div class="grid sm:grid-cols-2 gap-4">
+            <div class="flex items-center justify-center h-full">
+              <div class="reveal d2 w-full">
+                <form action="https://formspree.io/f/xkoaqkqg" method="POST">
+                  <div class="flex flex-col gap-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                      <div>
+                        <label for="fname" class="block text-xs font-medium text-zinc-400 mb-1.5">Name <span
+                            aria-hidden="true">*</span></label>
+                        <input type="text" id="fname" name="name" placeholder="John Doe" required autocomplete="name"
+                          class="w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-600 focus:outline-none focus:border-accent transition-colors">
+                      </div>
+                      <div>
+                        <label for="femail" class="block text-xs font-medium text-zinc-400 mb-1.5">Email <span
+                            aria-hidden="true">*</span></label>
+                        <input type="email" id="femail" name="email" placeholder="john@company.com" required
+                          autocomplete="email"
+                          class="w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-600 focus:outline-none focus:border-accent transition-colors">
+                      </div>
+                    </div>
                     <div>
-                      <label for="fname" class="block text-xs font-medium text-zinc-400 mb-1.5">Name <span
-                          aria-hidden="true">*</span></label>
-                      <input type="text" id="fname" name="name" placeholder="John Doe" required autocomplete="name"
+                      <label for="fsubject" class="block text-xs font-medium text-zinc-400 mb-1.5">Subject</label>
+                      <input type="text" id="fsubject" name="subject" placeholder="Job opportunity / Collaboration"
                         class="w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-600 focus:outline-none focus:border-accent transition-colors">
                     </div>
                     <div>
-                      <label for="femail" class="block text-xs font-medium text-zinc-400 mb-1.5">Email <span
+                      <label for="fmessage" class="block text-xs font-medium text-zinc-400 mb-1.5">Message <span
                           aria-hidden="true">*</span></label>
-                      <input type="email" id="femail" name="email" placeholder="john@company.com" required
-                        autocomplete="email"
-                        class="w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-600 focus:outline-none focus:border-accent transition-colors">
+                      <textarea id="fmessage" name="message" rows="4" placeholder="Tell me about the role or project..."
+                        required
+                        class="w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-600 focus:outline-none focus:border-accent transition-colors resize-none"></textarea>
                     </div>
+                    <button type="submit"
+                      class="shimmer w-full bg-accent text-white font-display font-bold text-sm py-3.5 rounded-xl hover:bg-accent-light transition-colors">
+                      Send message →
+                    </button>
                   </div>
-                  <div>
-                    <label for="fsubject" class="block text-xs font-medium text-zinc-400 mb-1.5">Subject</label>
-                    <input type="text" id="fsubject" name="subject" placeholder="Job opportunity / Collaboration"
-                      class="w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-600 focus:outline-none focus:border-accent transition-colors">
-                  </div>
-                  <div>
-                    <label for="fmessage" class="block text-xs font-medium text-zinc-400 mb-1.5">Message <span
-                        aria-hidden="true">*</span></label>
-                    <textarea id="fmessage" name="message" rows="4" placeholder="Tell me about the role or project..."
-                      required
-                      class="w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-600 focus:outline-none focus:border-accent transition-colors resize-none"></textarea>
-                  </div>
-                  <button type="submit"
-                    class="shimmer w-full bg-accent text-white font-display font-bold text-sm py-3.5 rounded-xl hover:bg-accent-light transition-colors">
-                    Send message →
-                  </button>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
-
           </div>
         </div>
       </div>
