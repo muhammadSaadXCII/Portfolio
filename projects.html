@@ -267,10 +267,10 @@
                   <img :src="p.img" :alt="p.title" loading="lazy" />
                 </a>
                 <div class="p-6">
-                  <div class="flex flex-wrap gap-2 mb-3">
+                  <div class="flex flex-nowrap gap-2 mb-3 overflow-x-auto scrollbar-hide -mx-1 px-1">
                     <template x-for="tag in p.tags" :key="tag">
-                      <span class="text-xs px-2.5 py-1 rounded-full"
-                        :class="tag === p.categoryLabel ? 'bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400'"
+                      <span class="text-xs px-2.5 py-1 rounded-full whitespace-nowrap shrink-0"
+                        :class="tag === p.categoryLabel ? 'bg-gray-50 dark:bg-zinc-800 text-accent border border-gray-400 dark:border-zinc-700' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400'"
                         x-text="tag"></span>
                     </template>
                   </div>
