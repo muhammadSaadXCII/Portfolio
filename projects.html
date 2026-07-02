@@ -158,9 +158,9 @@
         <li><a href="index.html#about"
             class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">About</a>
         </li>
-        <!-- <li><a href="index.html#services"
+        <li><a href="index.html#services"
             class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Services</a>
-        </li> -->
+        </li>
         <li><a href="index.html#skills"
             class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Skills</a>
         </li>
@@ -217,8 +217,8 @@
       <ul class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
         <li><a href="index.html#about" @click="mobileMenu=false"
             class="block text-zinc-700 dark:text-zinc-300">About</a></li>
-        <!-- <li><a href="index.html#services" @click="mobileMenu=false"
-            class="block text-zinc-700 dark:text-zinc-300">Services</a></li> -->
+        <li><a href="index.html#services" @click="mobileMenu=false"
+            class="block text-zinc-700 dark:text-zinc-300">Services</a></li>
         <li><a href="index.html#skills" @click="mobileMenu=false"
             class="block text-zinc-700 dark:text-zinc-300">Skills</a></li>
         <li><a href="index.html#projects" class="block text-zinc-700 dark:text-zinc-300">Projects</a></li>
@@ -503,6 +503,11 @@
               });
             }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
             document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+          });
+
+          // prevent right click
+          document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
           });
         }
       }
