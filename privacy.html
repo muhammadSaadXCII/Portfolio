@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" x-data="privacy()" :class="{'dark':dark}" x-init="init()" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Muhammad Saad</title>
+    <meta name="description" content="Privacy policy for Gmail Job Agent, a personal tool by Muhammad Saad.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap"
+        rel="stylesheet" />
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { display: ['PT Sans', 'sans-serif'], body: ['DM Sans', 'sans-serif'] }, colors: { accent: '#6A6E79', 'accent-light': '#8A8E97' } } } }</script>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'PT Sans', sans-serif;
+        }
+
+        body {
+            transition: background-color .3s, color .3s;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #6A6E79;
+            border-radius: 99px;
+        }
+
+        ::selection {
+            background-color: rgba(106, 110, 121, 0.3);
+            color: inherit;
+        }
+
+        [x-cloak] {
+            display: none !important;
+        }
+
+        .prose-p {
+            color: #71717a;
+            line-height: 1.75;
+        }
+
+        .dark .prose-p {
+            color: #a1a1aa;
+        }
+
+        .prose-p+.prose-p {
+            margin-top: 1rem;
+        }
+
+        .prose-p a {
+            color: #6A6E79;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .prose-list {
+            list-style: disc;
+            padding-left: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .prose-list li {
+            margin-top: .5rem;
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-body antialiased">
+
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+        :class="scrolled?'bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm shadow-black/5':'bg-transparent'">
+        <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between" aria-label="Main navigation">
+            <a href="index.html" class="font-display font-bold text-xl tracking-tight">
+                <span class="text-zinc-900 dark:text-white">Muhamd </span><span class="text-accent">Saad</span>
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="index.html"
+                    class="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Back
+                    to portfolio</a>
+                <button @click="dark=!dark;localStorage.setItem('theme',dark?'dark':'light')"
+                    class="w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                    :aria-label="dark?'Light mode':'Dark mode'">
+                    <svg x-show="!dark" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                    </svg>
+                    <svg x-show="dark" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-36 pb-24">
+        <div class="max-w-3xl mx-auto px-6">
+            <p class="text-xs font-medium text-accent tracking-widest uppercase mb-3">Legal</p>
+            <h1 class="font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white leading-tight mb-3">
+                Privacy
+                Policy</h1>
+            <p class="text-sm text-zinc-400 mb-12">Gmail Job Agent · Last updated October 3, 2026</p>
+
+            <section class="mb-10">
+                <h2 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mb-3">About this app</h2>
+                <p class="prose-p">Gmail Job Agent is a personal tool built and operated by Muhammad Saad. It reads
+                    job-application and interview emails in the developer's own Gmail account and organizes the key
+                    details
+                    (company, role, status and dates) into an Excel spreadsheet. It is not offered to the public, and no
+                    one other
+                    than the developer is asked to sign in.</p>
+            </section>
+
+            <section class="mb-10">
+                <h2 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mb-3">Data the app accesses
+                </h2>
+                <p class="prose-p">The app requests read-only access to Gmail through Google's OAuth. It uses this
+                    access only
+                    to find and read emails related to job applications and interviews. It cannot send, delete or modify
+                    emails.
+                </p>
+                <ul class="prose-list prose-p">
+                    <li>Email content such as the sender, subject, date and body of job-related messages.</li>
+                    <li>The OAuth token that keeps the app signed in, stored locally on the developer's own computer.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="mb-10">
+                <h2 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mb-3">How the data is used</h2>
+                <p class="prose-p">Email content is used for one purpose: extracting structured job-application details
+                    into a
+                    spreadsheet. To do this, the text of relevant emails is sent to a third-party AI model provider for
+                    processing. The data is not used for advertising, profiling, or training any model by the developer,
+                    and it
+                    is not sold or shared with anyone else.</p>
+            </section>
+
+            <section class="mb-10">
+                <h2 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mb-3">Storage and retention
+                </h2>
+                <p class="prose-p">Extracted results are saved in an Excel file on the developer's own device. The app
+                    does not
+                    run a public server or database, and no copy of your Gmail data is kept elsewhere. You can delete
+                    the
+                    spreadsheet and stored token at any time.</p>
+            </section>
+
+            <section class="mb-10">
+                <h2 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mb-3">Google API Services
+                    policy</h2>
+                <p class="prose-p">The app's use and transfer of information received from Google APIs adheres to the <a
+                        href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank"
+                        rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use
+                    requirements.</p>
+            </section>
+
+            <section class="mb-10">
+                <h2 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mb-3">Revoking access</h2>
+                <p class="prose-p">You can remove the app's access to your Google account at any time at <a
+                        href="https://myaccount.google.com/permissions" target="_blank"
+                        rel="noopener noreferrer">myaccount.google.com/permissions</a>.</p>
+            </section>
+
+            <section>
+                <h2 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mb-3">Contact</h2>
+                <p class="prose-p">Questions about this policy can be sent to <a
+                        href="mailto:muhamdsaad.dev@gmail.com">muhamdsaad.dev@gmail.com</a>.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="border-t border-zinc-100 dark:border-zinc-900">
+        <div class="max-w-6xl mx-auto px-6 py-8 flex items-center justify-center">
+            <p class="text-sm text-zinc-400">&copy; <span id="year"></span> Muhammad Saad. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function privacy() {
+            return {
+                dark: false,
+                scrolled: false,
+                init() {
+                    this.dark = localStorage.getItem('theme') === 'dark'
+                        || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                    window.addEventListener('scroll', () => { this.scrolled = window.scrollY > 20; }, { passive: true });
+                }
+            }
+        }
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

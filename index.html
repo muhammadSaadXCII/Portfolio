@@ -12,7 +12,7 @@
   <meta property="og:description" content="I design and build digital products that people love to use.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://eliott.dev">
-  <title>Muhammad Saad — Flutter &amp; Node.js Backend Developer</title>
+  <title>Muhammad Saad — Flutter &amp; Agentic AI Engineer</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -1417,6 +1417,116 @@
       <p>
     </div>
   </footer>
+
+  <!-- ═══ SAAD ASSISTANT (Final Animated Version) ═══ -->
+  <div x-data="{ chatOpen: false, message: '' }" class="fixed bottom-6 right-6 z-[100] font-body">
+
+    <!-- Chat Toggle Button -->
+    <button @click="chatOpen = !chatOpen"
+      class="w-14 h-14 rounded-full shadow-2xl flex items-center justify-center transition-all duration-500 hover:scale-110 active:scale-95 group relative overflow-hidden ring-2 ring-accent ring-offset-4 bg-white dark:bg-zinc-900 dark:ring-offset-zinc-950">
+
+      <!-- Subtle Pulse Animation (Visible when closed) -->
+      <span x-show="!chatOpen"
+        class="absolute inset-0 rounded-full bg-accent/20 animate-ping pointer-events-none"></span>
+
+      <!-- Your Image (Visible when chat is closed) -->
+      <img x-show="!chatOpen" x-transition:enter="transition duration-500"
+        x-transition:enter-start="opacity-0 scale-50 rotate-12" x-transition:enter-end="opacity-100 scale-100 rotate-0"
+        src="assets/images/profile-picture.png" class="w-full h-full object-cover" alt="Saad Assistant">
+
+      <!-- Close Icon (Visible when chat is open) -->
+      <div x-show="chatOpen" x-cloak x-transition:enter="transition duration-500"
+        x-transition:enter-start="opacity-0 rotate-90 scale-50" x-transition:enter-end="opacity-100 rotate-0 scale-100"
+        class="flex items-center justify-center text-white">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </div>
+    </button>
+
+    <!-- Chat Window -->
+    <div x-show="chatOpen" x-cloak
+      x-transition:enter="transition cubic-bezier(0.34, 1.56, 0.64, 1) duration-500 transform origin-bottom-right"
+      x-transition:enter-start="opacity-0 translate-y-12 scale-75 rotate-3"
+      x-transition:enter-end="opacity-100 translate-y-0 scale-100 rotate-0"
+      x-transition:leave="transition ease-in duration-300 transform origin-bottom-right"
+      x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 translate-y-12 scale-75"
+      class="absolute bottom-20 right-0 w-[380px] max-w-[calc(100vw-2rem)] bg-white dark:bg-zinc-950 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.3)] overflow-hidden border border-zinc-200 dark:border-zinc-800 flex flex-col">
+
+      <!-- Header -->
+      <div class="bg-accent p-5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="relative group">
+            <img src="assets/images/profile-picture.png" alt="Saad"
+              class="w-12 h-12 rounded-full object-cover border-2 border-white/20 transition-transform group-hover:scale-110">
+            <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-accent rounded-full"></span>
+          </div>
+          <div>
+            <p class="text-white font-display font-bold text-lg leading-tight">Saad's Assistant</p>
+            <div class="flex items-center gap-1.5">
+              <p class="text-white/80 text-xs font-medium">Typically replies instantly</p>
+            </div>
+          </div>
+        </div>
+        <button @click="chatOpen = false"
+          class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-all active:scale-90">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Chat Content -->
+      <div class="flex-1 p-6 space-y-8 min-h-[350px]">
+        <!-- Assistant Message (Slides in with delay) -->
+        <div x-show="chatOpen" x-transition:enter="transition ease-out delay-300 duration-500"
+          x-transition:enter-start="opacity-0 translate-x-[-10px]" x-transition:enter-end="opacity-100 translate-x-0"
+          class="flex items-start gap-3">
+          <img src="assets/images/profile-picture.png"
+            class="w-8 h-8 rounded-full object-cover mt-1 border border-zinc-200 dark:border-zinc-800">
+          <div
+            class="bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 text-[15px] p-5 rounded-[1.8rem] rounded-tl-none leading-relaxed shadow-sm max-w-[85%]">
+            Hi! I'm Saad's assistant. Ask me anything about my services, approach, or how I can help your project.
+          </div>
+        </div>
+
+        <!-- Suggestion Pills (Slides up with delay) -->
+        <div x-show="chatOpen" x-transition:enter="transition ease-out delay-500 duration-500"
+          x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+          class="flex flex-wrap gap-2 justify-start pt-10">
+          <button
+            class="text-[13px] font-medium text-accent border border-zinc-200 dark:border-zinc-800 bg-transparent rounded-full px-5 py-2.5 hover:bg-accent hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300">What
+            services do you offer?</button>
+          <button
+            class="text-[13px] font-medium text-accent border border-zinc-200 dark:border-zinc-800 bg-transparent rounded-full px-5 py-2.5 hover:bg-accent hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300">Tell
+            me about your tech stack</button>
+          <button
+            class="text-[13px] font-medium text-accent border border-zinc-200 dark:border-zinc-800 bg-transparent rounded-full px-5 py-2.5 hover:bg-accent hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300">How
+            can I contact Saad?</button>
+        </div>
+      </div>
+
+      <!-- Input Area (With Typing Glow) -->
+      <div
+        class="p-5 flex items-center gap-3 bg-zinc-50 dark:bg-zinc-950/50 border-t border-zinc-100 dark:border-zinc-800">
+        <div class="relative flex-1">
+          <input type="text" x-model="message" placeholder="Ask a question..."
+            class="w-full bg-white dark:bg-zinc-900 border text-zinc-900 dark:text-white text-sm rounded-2xl py-4 px-6 placeholder-zinc-500 focus:outline-none transition-all duration-300"
+            :class="message.length > 0 ? 'border-accent ring-4 ring-accent/20 shadow-[0_0_20px_rgba(106,110,121,0.3)]' : 'border-zinc-200 dark:border-zinc-800'">
+        </div>
+
+        <!-- Send Button also reacts to typing -->
+        <button
+          class="w-12 h-12 flex items-center justify-center rounded-2xl transition-all duration-300 active:scale-90"
+          :class="message.length > 0 ? 'bg-accent text-white shadow-lg shadow-accent/30' : 'bg-accent/10 text-accent'">
+          <svg class="w-6 h-6 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <script>
     function app() {
