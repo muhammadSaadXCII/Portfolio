@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact — Muhammad Saad | Get in Touch</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 1. ADDED COLLAPSE PLUGIN (Must be before core alpine) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link
@@ -345,73 +348,73 @@
             </div>
         </section>
 
-        <!-- ═══ COMMON QUESTIONS (Accordion Section) ═══ -->
-        <section class="py-24 bg-zinc-50 dark:bg-zinc-900/40 border-y border-zinc-100 dark:border-zinc-900">
+        <section class="py-24 bg-zinc-50 dark:bg-zinc-900/20 border-y border-zinc-100 dark:border-white/5">
             <div class="max-w-3xl mx-auto px-6" x-data="{ active: null }">
                 <p class="reveal text-center text-xs font-bold text-accent tracking-[0.4em] uppercase mb-10">Common
                     Questions</p>
-
                 <div class="space-y-1">
+
                     <!-- Q1 -->
-                    <div class="reveal d1 border-b border-zinc-200 dark:border-white/5 transition-colors duration-300"
-                        :class="active === 0 ? 'bg-zinc-100/50 dark:bg-white/[0.02]' : ''">
+                    <div class="reveal d1 border-b border-zinc-200 dark:border-white/5 transition-all duration-500"
+                        :class="active === 0 ? 'bg-zinc-100 dark:bg-white/[0.03]' : ''">
                         <button @click="active = (active === 0 ? null : 0)"
                             class="w-full py-8 px-4 flex justify-between items-center text-left group">
-                            <h4
-                                class="font-display font-bold text-xl md:text-2xl text-zinc-900 dark:text-white transition-colors group-hover:text-accent">
-                                How do you price your services?</h4>
-                            <span class="text-accent text-3xl font-light transition-transform duration-500 ease-in-out"
+                            <h4 class="font-display font-bold text-xl md:text-2xl transition-colors group-hover:text-accent"
+                                :class="active === 0 ? 'text-accent' : 'text-zinc-900 dark:text-white'">How do you price
+                                your services?</h4>
+                            <span class="text-accent text-3xl font-light transition-transform duration-500"
                                 :class="active === 0 ? 'rotate-45' : ''">+</span>
                         </button>
+                        <!-- x-collapse adds the slide animation -->
                         <div x-show="active === 0" x-cloak x-collapse>
                             <div class="px-4 pb-8">
-                                <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed font-light max-w-2xl">Every
-                                    engagement is scoped individually based on your specific goals, the complexity of
-                                    the features, and the total timeline required. Get in touch and I'll provide an
-                                    honest estimate.</p>
+                                <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed font-light">Every engagement
+                                    is scoped individually based on your goals, the complexity of the features, and the
+                                    timeline. Reach out for an honest estimate.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Q2 -->
-                    <div class="reveal d2 border-b border-zinc-200 dark:border-white/5 transition-colors duration-300"
-                        :class="active === 1 ? 'bg-zinc-100/50 dark:bg-white/[0.02]' : ''">
+                    <div class="reveal d2 border-b border-zinc-200 dark:border-white/5 transition-all duration-500"
+                        :class="active === 1 ? 'bg-zinc-100 dark:bg-white/[0.03]' : ''">
                         <button @click="active = (active === 1 ? null : 1)"
                             class="w-full py-8 px-4 flex justify-between items-center text-left group">
-                            <h4
-                                class="font-display font-bold text-xl md:text-2xl text-zinc-900 dark:text-white transition-colors group-hover:text-accent">
-                                Do you work with clients outside Pakistan?</h4>
-                            <span class="text-accent text-3xl font-light transition-transform duration-500 ease-in-out"
+                            <h4 class="font-display font-bold text-xl md:text-2xl transition-colors group-hover:text-accent"
+                                :class="active === 1 ? 'text-accent' : 'text-zinc-900 dark:text-white'">Do you work with
+                                clients outside Pakistan?</h4>
+                            <span class="text-accent text-3xl font-light transition-transform duration-500"
                                 :class="active === 1 ? 'rotate-45' : ''">+</span>
                         </button>
                         <div x-show="active === 1" x-cloak x-collapse>
                             <div class="px-4 pb-8">
-                                <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed font-light max-w-2xl">Yes.
-                                    Most of my collaboration is remote. I work with clients across different time zones
-                                    using Git, Slack, and Zoom. We'll find a schedule that works for both of us.</p>
+                                <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed font-light">Yes. I
+                                    collaborate remotely with clients globally using Slack, Zoom, and Git. We'll find a
+                                    schedule that works for both of us.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Q3 -->
-                    <div class="reveal d3 border-b border-zinc-200 dark:border-white/5 transition-colors duration-300"
-                        :class="active === 2 ? 'bg-zinc-100/50 dark:bg-white/[0.02]' : ''">
+                    <div class="reveal d3 border-b border-zinc-200 dark:border-white/5 transition-all duration-500"
+                        :class="active === 2 ? 'bg-zinc-100 dark:bg-white/[0.03]' : ''">
                         <button @click="active = (active === 2 ? null : 2)"
                             class="w-full py-8 px-4 flex justify-between items-center text-left group">
-                            <h4
-                                class="font-display font-bold text-xl md:text-2xl text-zinc-900 dark:text-white transition-colors group-hover:text-accent">
-                                How long before I see results?</h4>
-                            <span class="text-accent text-3xl font-light transition-transform duration-500 ease-in-out"
+                            <h4 class="font-display font-bold text-xl md:text-2xl transition-colors group-hover:text-accent"
+                                :class="active === 2 ? 'text-accent' : 'text-zinc-900 dark:text-white'">How long before
+                                I see results?</h4>
+                            <span class="text-accent text-3xl font-light transition-transform duration-500"
                                 :class="active === 2 ? 'rotate-45' : ''">+</span>
                         </button>
                         <div x-show="active === 2" x-cloak x-collapse>
                             <div class="px-4 pb-8">
-                                <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed font-light max-w-2xl">It
-                                    depends on the scope. A functional MVP typically takes 4–8 weeks. I'll set realistic
-                                    milestones at the start of every engagement so you always know where we stand.</p>
+                                <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed font-light">A functional MVP
+                                    typically takes 4–8 weeks. I set realistic milestones at the start so you always
+                                    know the project's progress.</p>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
